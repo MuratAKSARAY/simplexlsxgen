@@ -582,10 +582,7 @@ class SimpleXLSXGen {
                                 }
                             }
                         }
-                    } elseif ( is_int( $v ) ) {
-                        $vl = mb_strlen( (string) $v );
-                        $cv = $v;
-                    } elseif ( is_float( $v ) ) {
+                    } elseif ( is_int( $v ) || is_float( $v ) ) {
                         $vl = mb_strlen( (string) $v );
                         $cv = $v;
                     } elseif ( $v instanceof \DateTime ) {
